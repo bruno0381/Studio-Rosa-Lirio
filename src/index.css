@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* ------------------------------ */
+/*   ANIMAÇÕES PERSONALIZADAS     */
+/* ------------------------------ */
+
+/* Fade in */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+/* Fade up */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 1s ease-out forwards;
+}
+
+/* Slide esquerdo */
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 1s ease-out forwards;
+}
+
+/* Slide direito */
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-right {
+  animation: slide-right 1s ease-out forwards;
+}
+
+@keyframes pink-glow {
+  0% {
+    box-shadow: 0 0 10px rgba(226, 119, 167, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(226, 119, 167, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(226, 119, 167, 0.4);
+  }
+}
+
+.pink-glow {
+  animation: pink-glow 1.3s infinite ease-in-out;
+}
+
+
+/* --- Pular para cima e para baixo --- */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.jump-animation {
+  animation: jump 1s infinite ease-in-out;
+}
+
+/* --- Piscar com luz verde --- */
+@keyframes green-blink {
+  0% {
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(0, 255, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.3);
+  }
+}
+
+.green-glow {
+  animation: green-blink 1.4s infinite ease-in-out;
+}
