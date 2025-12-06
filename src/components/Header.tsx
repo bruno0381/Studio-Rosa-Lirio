@@ -15,6 +15,12 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+
+  useEffect(() => {
+     document.body.style.overflow = open ? "hidden" : "auto";
+      }, [open]);
+
+
   return (
     <>
       {/* BACKDROP ESCURO DO MENU */}
@@ -52,7 +58,7 @@ const Header = () => {
           {/* BOTÃO HAMBURGER */}
           <button
             onClick={() => setOpen(true)}
-            className="md:hidden flex flex-col gap-1 z-50"
+            className="md:hidden flex flex-col gap-1 z-50 overflow-hidden"
           >
             <span className="w-6 h-0.5 bg-pink-500"></span>
             <span className="w-6 h-0.5 bg-pink-500"></span>
@@ -64,9 +70,10 @@ const Header = () => {
       {/* MENU LATERAL PREMIUM */}
       <div
         className={`
-          fixed top-0 right-0 h-full w-72 bg-white z-50
-          transform transition-transform duration-300
-          ${open ? "translate-x-0" : "translate-x-full"}
+           fixed top-0 right-0 h-full w-72 max-w-[90vw] bg-white z-50
+           transform transition-transform duration-300
+           overflow-x-hidden
+           ${open ? "translate-x-0" : "translate-x-full"}
         `}
       >
         <div className="p-6 flex flex-col gap-6 font-medium text-center">
