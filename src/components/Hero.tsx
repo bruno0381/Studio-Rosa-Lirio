@@ -28,7 +28,9 @@ const Hero = () => {
         <div className={`${show ? "animate-slide-right" : "opacity-0"}`}>
           <img
             src={portfolioImg}
-            className="max-w-sm rounded-3xl shadow-xl transition-all duration-500 hover:scale-105"
+            className="w-full
+             max-w-[260px] sm:max-w-sm md:max-w-md mx-auto rounded-3xl shadow-xl transition-all duration-500
+             hover:scale-105"
           />
         </div>
 
